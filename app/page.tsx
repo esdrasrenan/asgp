@@ -21,7 +21,7 @@ export default function Home() {
           {/* Top bar */}
           <header className="container mx-auto flex items-center justify-between px-6 md:px-12 py-6 text-white">
             <div className="text-2xl md:text-3xl font-semibold tracking-tight">elementra.</div>
-            <nav className="hidden md:flex items-center gap-8 pr-20 md:pr-32 text-base md:text-lg font-semibold tracking-tight text-white/85">
+            <nav className="hidden md:flex items-center gap-8 pr-24 md:pr-40 text-base md:text-lg font-semibold tracking-tight text-white/85">
               {[
                 ["Home", "#"],
                 ["About", "#"],
@@ -39,7 +39,7 @@ export default function Home() {
           {/* Right aligned block */}
           <div className="container mx-auto px-5 md:px-10">
             <div className="min-h-[60svh] md:min-h-[68svh] flex items-center">
-              <div className="ml-auto max-w-[640px] text-left text-white pr-4 md:pr-8 lg:pr-12 xl:pr-16 mt-14 md:mt-18">
+              <div className="ml-auto max-w-[720px] text-left text-white pr-2 md:pr-6 lg:pr-10 xl:pr-16 mt-10 md:mt-12">
                 <div className="mb-8 space-y-1.5 md:space-y-2">
                   <p className="text-[22px] md:text-[26px] lg:text-[28px] leading-[1.15] font-medium text-white">
                     Transform your financial strategy with our expert consulting team.
@@ -59,7 +59,7 @@ export default function Home() {
           </div>
 
           {/* Big heading near bottom */}
-          <div className="container mx-auto px-4 md:px-8 pb-32 md:pb-40">
+          <div className="container mx-auto px-4 md:px-8 pb-12 md:pb-16">
             <h1 className="text-white text-[10vw] leading-[0.88] md:text-[7.4vw] font-medium tracking-[-0.03em]">
               <span>Transform your.</span>
               <br />
