@@ -38,7 +38,7 @@ export default function Home() {
 
           {/* Two-column layout: left title, right description + CTA */}
           <div className="mx-auto max-w-[1600px] px-4 md:px-8">
-            <div className="grid md:grid-cols-2 items-end gap-6 md:gap-12 min-h-[64svh] pb-6 md:pb-10">
+            <div className="grid md:grid-cols-2 items-end gap-6 md:gap-12 min-h-[72svh] pb-2 md:pb-4">
               {/* Left title */}
               <div>
                 <h1 className="text-white text-[7.6vw] md:text-[6vw] leading-[0.98] font-medium tracking-[-0.03em]">
