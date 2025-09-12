@@ -21,7 +21,7 @@ export default function Home() {
           {/* Top bar */}
           <header className="container mx-auto flex items-center justify-between px-6 md:px-12 py-6 text-white">
             <div className="text-2xl md:text-3xl font-semibold tracking-tight">elementra.</div>
-            <nav className="hidden md:flex items-center gap-8 pr-10 md:pr-16 text-base md:text-lg font-semibold tracking-tight text-white/85">
+            <nav className="hidden md:flex items-center gap-8 pr-14 md:pr-24 text-base md:text-lg font-semibold tracking-tight text-white/85">
               {[
                 ["Home", "#"],
                 ["About", "#"],
@@ -39,13 +39,10 @@ export default function Home() {
           {/* Right aligned block */}
           <div className="container mx-auto px-5 md:px-10">
             <div className="min-h-[60svh] md:min-h-[68svh] flex items-center">
-              <div className="ml-auto max-w-[485px] text-left text-white pr-6 md:pr-16 lg:pr-24 mt-6 md:mt-10">
-                <div className="mb-8 space-y-1.5 md:space-y-2.5">
+              <div className="ml-auto max-w-[520px] text-left text-white pr-10 md:pr-24 lg:pr-40 xl:pr-52 mt-12 md:mt-16">
+                <div className="mb-8 space-y-1.5 md:space-y-2">
                   <p className="text-[22px] md:text-[26px] lg:text-[28px] leading-[1.15] font-medium text-white">
-                    Transform your financial strategy
-                  </p>
-                  <p className="text-[22px] md:text-[26px] lg:text-[28px] leading-[1.15] font-medium text-white">
-                    with our expert consulting team.
+                    Transform your financial strategy with our expert consulting team.
                   </p>
                   <p className="text-[22px] md:text-[26px] lg:text-[28px] leading-[1.15] font-medium text-[#CEF5A4]">
                     We craft solutions tailored to your business.
@@ -62,7 +59,7 @@ export default function Home() {
           </div>
 
           {/* Big heading near bottom */}
-          <div className="container mx-auto px-5 md:px-10 pb-10 md:pb-16">
+          <div className="container mx-auto px-4 md:px-8 pb-20 md:pb-28">
             <h1 className="text-white text-[10vw] leading-[0.88] md:text-[7.4vw] font-medium tracking-[-0.03em]">
               <span>Transform your.</span>
               <br />
