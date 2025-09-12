@@ -3,72 +3,75 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
     <div className="min-h-dvh bg-background text-foreground">
-      <header className="container mx-auto flex items-center justify-between py-6">
-        <div className="text-lg font-semibold tracking-tight">asgp</div>
-        <nav className="flex items-center gap-4 text-sm text-muted-foreground">
-          <a href="#features" className="hover:text-foreground">
-            Features
-          </a>
-          <a href="#cta" className="hover:text-foreground">
-            Começar
-          </a>
-        </nav>
-      </header>
+      {/* Hero with background image + overlay */}
+      <section
+        className="relative min-h-[100svh]"
+        aria-label="Hero"
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url(/Referência/imgi_21_custom-img-001.jpg)",
+          }}
+        />
+        <div className="absolute inset-0 bg-black/40" />
 
-      <main className="container mx-auto px-4">
-        {/* Hero */}
-        <section className="flex flex-col items-center text-center py-20 gap-6">
-          <h1 className="text-balance text-4xl md:text-6xl font-semibold tracking-tight">
-            Single‑page demo com Next.js 15 + Turbopack
-          </h1>
-          <p className="text-pretty max-w-2xl text-muted-foreground">
-            Estrutura pronta para iniciar seu layout: App Router, Tailwind v4,
-            ESLint configurado e shadcn preparado.
-          </p>
-          <div className="flex flex-wrap items-center gap-3">
-            <Button asChild>
-              <a href="#cta">Começar agora</a>
-            </Button>
-            <Button variant="outline" asChild>
-              <a href="https://nextjs.org/docs" target="_blank" rel="noreferrer">
-                Documentação
-              </a>
-            </Button>
+        <div className="relative z-10">
+          {/* Top bar */}
+          <header className="container mx-auto flex items-center justify-between px-5 md:px-10 py-6 text-white">
+            <div className="text-xl font-semibold tracking-tight">elementra.</div>
+            <nav className="hidden md:flex items-center gap-8 text-sm/6 text-white/80">
+              {[
+                ["Home", "#"],
+                ["About", "#"],
+                ["Services", "#"],
+                ["Our Team", "#"],
+                ["Contact", "#"],
+              ].map(([label, href]) => (
+                <a key={label} href={href} className="hover:text-white">
+                  {label}
+                </a>
+              ))}
+            </nav>
+          </header>
+
+          {/* Right aligned block */}
+          <div className="container mx-auto px-5 md:px-10">
+            <div className="min-h-[60svh] md:min-h-[68svh] flex items-center">
+              <div className="ml-auto max-w-[445px] text-left text-white">
+                <p className="mb-6 text-white/90">
+                  Transform your financial strategy
+                  <br />
+                  with our expert consulting team.
+                  <br />
+                  <span className="text-[#CEF5A4]">
+                    We craft solutions tailored to your business.
+                  </span>
+                </p>
+                <Button asChild className="bg-primary text-primary-foreground">
+                  <a href="#contact">Contact Us</a>
+                </Button>
+              </div>
+            </div>
           </div>
-        </section>
 
-        {/* Features */}
-        <section id="features" className="grid gap-6 md:grid-cols-3 py-12">
-          <Feature title="Turbopack" desc="Dev e build com --turbopack ativados." />
-          <Feature title="App Router" desc="RSC, layouts e rotas modernas." />
-          <Feature title="shadcn/ui" desc="Componentes prontos para instalar via CLI." />
-        </section>
+          {/* Big heading near bottom */}
+          <div className="container mx-auto px-5 md:px-10 pb-8">
+            <h1 className="text-white text-[10vw] leading-[0.85] md:text-[7.4vw] font-medium tracking-[-0.03em]">
+              Transform your vision today!
+            </h1>
+          </div>
+        </div>
+      </section>
 
-        {/* CTA */}
-        <section id="cta" className="rounded-xl border p-8 md:p-10 my-16 text-center">
-          <h2 className="text-2xl md:text-3xl font-medium tracking-tight mb-3">
-            Pronto para começar o layout?
-          </h2>
-          <p className="text-muted-foreground mb-6">
-            Podemos evoluir este demo em sua identidade visual.
-          </p>
-          <Button>Fale comigo</Button>
-        </section>
+      {/* Placeholder next content so page isn’t empty after hero */}
+      <main className="container mx-auto px-5 md:px-10 py-16" id="contact">
+        <p className="text-muted-foreground">
+          Seções seguintes virão na próxima etapa. Deixe os textos como estão e
+          as imagens podem ser placeholders — vamos replicando seção por seção.
+        </p>
       </main>
-
-      <footer className="border-t py-8 text-center text-sm text-muted-foreground">
-        <span>Next.js 15 • Tailwind v4 • shadcn</span>
-      </footer>
     </div>
   );
 }
-
-function Feature({ title, desc }: { title: string; desc: string }) {
-  return (
-    <div className="rounded-lg border p-6">
-      <h3 className="font-medium mb-1">{title}</h3>
-      <p className="text-sm text-muted-foreground">{desc}</p>
-    </div>
-  );
-}
-
