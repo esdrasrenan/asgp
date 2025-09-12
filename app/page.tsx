@@ -21,7 +21,7 @@ export default function Home() {
           {/* Top bar */}
           <header className="container mx-auto flex items-center justify-between px-6 md:px-12 py-6 text-white">
             <div className="text-2xl md:text-3xl font-semibold tracking-tight">asgp</div>
-            <nav className="hidden md:flex items-center gap-8 pr-24 md:pr-40 text-base md:text-lg font-semibold tracking-tight text-white/85">
+            <nav className="hidden md:flex items-center gap-8 pr-36 md:pr-64 text-base md:text-lg font-semibold tracking-tight text-white/85">
               {[
                 ["Home", "#"],
                 ["Serviços", "#servicos"],
