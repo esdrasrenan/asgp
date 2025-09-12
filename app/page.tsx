@@ -38,10 +38,10 @@ export default function Home() {
 
           {/* Two-column layout: left title, right description + CTA */}
           <div className="mx-auto max-w-[1600px] px-4 md:px-8">
-            <div className="grid md:grid-cols-2 items-end gap-6 md:gap-12 min-h-[64svh] pb-24 md:pb-32">
+            <div className="grid md:grid-cols-2 items-end gap-6 md:gap-12 min-h-[64svh] pb-6 md:pb-10">
               {/* Left title */}
               <div>
-                <h1 className="text-white text-[8.5vw] md:text-[6.8vw] leading-[0.95] font-medium tracking-[-0.03em]">
+                <h1 className="text-white text-[7.6vw] md:text-[6vw] leading-[0.98] font-medium tracking-[-0.03em]">
                   <span>Transform your.</span>
                   <br />
                   <span>vision today!</span>
