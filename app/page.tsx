@@ -20,14 +20,12 @@ export default function Home() {
         <div className="relative z-10">
           {/* Top bar */}
           <header className="container mx-auto flex items-center justify-between px-6 md:px-12 py-6 text-white">
-            <div className="text-2xl md:text-3xl font-semibold tracking-tight">elementra.</div>
+            <div className="text-2xl md:text-3xl font-semibold tracking-tight">asgp</div>
             <nav className="hidden md:flex items-center gap-8 pr-24 md:pr-40 text-base md:text-lg font-semibold tracking-tight text-white/85">
               {[
-                ["Home", "#"],
-                ["About", "#"],
-                ["Services", "#"],
-                ["Our Team", "#"],
-                ["Contact", "#"],
+                ["Serviços", "#servicos"],
+                ["Empresa", "#empresa"],
+                ["Contato", "#contato"],
               ].map(([label, href]) => (
                 <a key={label} href={href} className="hover:text-white">
                   {label}
@@ -38,13 +36,13 @@ export default function Home() {
 
           {/* Two-column layout: left title, right description + CTA */}
           <div className="mx-auto max-w-[1600px] px-4 md:px-8">
-            <div className="grid md:grid-cols-2 items-end gap-6 md:gap-12 min-h-[72svh] pb-2 md:pb-4">
+            <div className="grid md:grid-cols-2 items-end gap-6 md:gap-12 min-h-[80svh] pb-0">
               {/* Left title */}
               <div>
-                <h1 className="text-white text-[7.6vw] md:text-[6vw] leading-[0.98] font-medium tracking-[-0.03em]">
-                  <span>Transform your.</span>
+                <h1 className="text-white text-[7.2vw] md:text-[5.6vw] leading-[0.98] font-medium tracking-[-0.03em]">
+                  <span>BPO Financeiro</span>
                   <br />
-                  <span>vision today!</span>
+                  <span>sem burocracia</span>
                 </h1>
               </div>
 
@@ -52,17 +50,17 @@ export default function Home() {
               <div className="justify-self-end w-full max-w-[820px] text-left text-white pr-0">
                 <div className="mb-8 space-y-1.5 md:space-y-2">
                   <p className="text-[22px] md:text-[26px] lg:text-[28px] leading-[1.15] font-medium text-white">
-                    Transform your financial strategy with our expert consulting team.
+                    Cuidamos da burocracia para você focar no que realmente importa
                   </p>
                   <p className="text-[22px] md:text-[26px] lg:text-[28px] leading-[1.15] font-medium" style={{ color: "var(--primary)" }}>
-                    We craft solutions tailored to your business.
+                    — o crescimento do seu negócio.
                   </p>
                 </div>
                 <Button
                   asChild
                   className="h-12 md:h-14 px-8 md:px-10 text-base md:text-lg rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
                 >
-                  <a href="#contact">Contact Us</a>
+                  <a href="#contato">Fale conosco</a>
                 </Button>
               </div>
             </div>
