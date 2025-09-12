@@ -23,8 +23,10 @@ export default function Home() {
             <div className="text-2xl md:text-3xl font-semibold tracking-tight">asgp</div>
             <nav className="hidden md:flex items-center gap-8 pr-24 md:pr-40 text-base md:text-lg font-semibold tracking-tight text-white/85">
               {[
+                ["Home", "#"],
                 ["Serviços", "#servicos"],
                 ["Empresa", "#empresa"],
+                ["Equipe", "#equipe"],
                 ["Contato", "#contato"],
               ].map(([label, href]) => (
                 <a key={label} href={href} className="hover:text-white">
@@ -51,9 +53,7 @@ export default function Home() {
                 <div className="mb-8 space-y-1.5 md:space-y-2">
                   <p className="text-[22px] md:text-[26px] lg:text-[28px] leading-[1.15] font-medium text-white">
                     Cuidamos da burocracia para você focar no que realmente importa
-                  </p>
-                  <p className="text-[22px] md:text-[26px] lg:text-[28px] leading-[1.15] font-medium" style={{ color: "var(--primary)" }}>
-                    — o crescimento do seu negócio.
+                    <span style={{ color: "var(--primary)" }}> — o crescimento do seu negócio.</span>
                   </p>
                 </div>
                 <Button
