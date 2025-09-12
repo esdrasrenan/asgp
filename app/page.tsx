@@ -36,15 +36,25 @@ export default function Home() {
             </nav>
           </header>
 
-          {/* Right aligned block */}
-          <div className="container mx-auto px-5 md:px-10">
-            <div className="min-h-[60svh] md:min-h-[68svh] flex items-center">
-              <div className="ml-auto max-w-[720px] text-left text-white pr-2 md:pr-6 lg:pr-10 xl:pr-16 mt-10 md:mt-12">
+          {/* Two-column layout: left title, right description + CTA */}
+          <div className="container mx-auto px-6 md:px-12">
+            <div className="grid md:grid-cols-2 items-end gap-6 md:gap-12 min-h-[64svh] pb-24 md:pb-32">
+              {/* Left title */}
+              <div>
+                <h1 className="text-white text-[9.2vw] md:text-[7.4vw] leading-[0.9] font-medium tracking-[-0.03em]">
+                  <span>Transform your.</span>
+                  <br />
+                  <span>vision today!</span>
+                </h1>
+              </div>
+
+              {/* Right description + CTA aligned to the right edge */}
+              <div className="justify-self-end w-full max-w-[780px] text-left text-white pr-0">
                 <div className="mb-8 space-y-1.5 md:space-y-2">
                   <p className="text-[22px] md:text-[26px] lg:text-[28px] leading-[1.15] font-medium text-white">
                     Transform your financial strategy with our expert consulting team.
                   </p>
-                  <p className="text-[22px] md:text-[26px] lg:text-[28px] leading-[1.15] font-medium text-[#CEF5A4]">
+                  <p className="text-[22px] md:text-[26px] lg:text-[28px] leading-[1.15] font-medium" style={{ color: "var(--primary)" }}>
                     We craft solutions tailored to your business.
                   </p>
                 </div>
@@ -56,15 +66,6 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-          </div>
-
-          {/* Big heading near bottom */}
-          <div className="container mx-auto px-4 md:px-8 pb-12 md:pb-16">
-            <h1 className="text-white text-[10vw] leading-[0.88] md:text-[7.4vw] font-medium tracking-[-0.03em]">
-              <span>Transform your.</span>
-              <br />
-              <span>vision today!</span>
-            </h1>
           </div>
         </div>
       </section>
