@@ -20,7 +20,11 @@ export default function Home() {
         <div className="relative z-10">
           {/* Top bar */}
           <header className="mx-auto max-w-[1600px] flex items-center justify-between px-4 md:px-8 py-6 text-white">
-            <div className="text-2xl md:text-3xl font-semibold tracking-tight">asgp</div>
+            <a
+              href="#"
+              aria-label="ASGP"
+              className="inline-block h-9 w-28 md:h-10 md:w-36 bg-white [mask-image:url('/asgp_logo.svg')] [mask-size:contain] [mask-repeat:no-repeat] [mask-position:left_center]"
+            />
             <nav className="hidden md:flex items-center gap-8 pr-0 md:pr-0 text-base md:text-lg font-semibold tracking-tight text-white/85">
               {[
                 ["Home", "#"],
