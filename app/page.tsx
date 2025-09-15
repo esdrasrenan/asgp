@@ -392,8 +392,8 @@ export default function Home() {
                     <Textarea id="mensagem" name="mensagem" placeholder="Mensagem" rows={4} />
                   </div>
                   <div className="flex items-start gap-3 text-sm text-foreground/70">
-                    <Checkbox id="consent" />
-                    <label htmlFor="consent">Autorizo o uso dos meus dados para contato.</label>
+                    <Checkbox id="consent" className="mt-1" />
+                    <label htmlFor="consent" className="leading-6">Autorizo o uso dos meus dados para contato.</label>
                   </div>
                   <div className="pt-2">
                     <Button className="w-full h-12 rounded-lg">Enviar mensagem</Button>
