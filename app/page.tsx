@@ -9,7 +9,7 @@ export default function Home() {
     <div className="min-h-dvh bg-background text-foreground">
       {/* Hero with background image + overlay */}
       <section
-        className="relative min-h-[100svh]"
+        className="relative min-h-screen"
         aria-label="Hero"
       >
         <div
@@ -49,7 +49,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 items-end gap-6 md:gap-12 min-h-[80svh] pb-0">
               {/* Left title */}
               <div>
-                <h1 className="text-white text-[9.2vw] md:text-[5.2vw] leading-[0.98] font-medium tracking-[-0.03em]">
+                <h1 className="text-white text-[10.5vw] md:text-[5.2vw] leading-[0.98] font-medium tracking-[-0.03em]">
                   <span>BPO Financeiro</span>
                   <br />
                   <span>sem burocracia</span>
@@ -256,8 +256,8 @@ export default function Home() {
               <span>nossos clientes</span>
             </p>
 
-            <div className="md:col-span-5 flex flex-wrap justify-center items-center gap-12 md:gap-16">
-              <div className="group w-1/2 sm:w-1/3 lg:w-1/5 flex justify-center">
+            <div className="md:col-span-5 grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-12 md:gap-16 justify-items-center">
+              <div className="group max-w-[220px] w-full justify-self-center flex justify-center">
                 <Image
                   src="/Referência/imgi_2_client-001.png"
                   alt="Bellway"
@@ -266,7 +266,7 @@ export default function Home() {
                   className="h-10 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
                 />
               </div>
-              <div className="group w-1/2 sm:w-1/3 lg:w-1/5 flex justify-center">
+              <div className="group max-w-[220px] w-full justify-self-center flex justify-center">
                 <Image
                   src="/Referência/imgi_3_client-002.png"
                   alt="GitHub"
@@ -275,7 +275,7 @@ export default function Home() {
                   className="h-12 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
                 />
               </div>
-              <div className="group w-1/2 sm:w-1/3 lg:w-1/5 flex justify-center">
+              <div className="group max-w-[220px] w-full justify-self-center flex justify-center">
                 <Image
                   src="/Referência/imgi_4_client-003.png"
                   alt="Payoneer"
@@ -284,7 +284,7 @@ export default function Home() {
                   className="h-10 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
                 />
               </div>
-              <div className="group w-1/2 sm:w-1/3 lg:w-1/5 flex justify-center">
+              <div className="group max-w-[220px] w-full justify-self-center flex justify-center">
                 <Image
                   src="/Referência/imgi_5_client-004.png"
                   alt="JLL"
@@ -293,7 +293,7 @@ export default function Home() {
                   className="h-10 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
                 />
               </div>
-              <div className="group w-1/2 sm:w-1/3 lg:w-1/5 flex justify-center">
+              <div className="group max-w-[220px] w-full justify-self-center flex justify-center">
                 <Image
                   src="/Referência/imgi_6_client-005.png"
                   alt="Logo cliente"
@@ -390,7 +390,15 @@ export default function Home() {
                   </div>
                   <div>
                     <label className="sr-only" htmlFor="mensagem">Mensagem</label>
-                    <Textarea id="mensagem" name="mensagem" placeholder="Mensagem" rows={4} />
+                    <Textarea 
+                      id="mensagem" 
+                      name="mensagem" 
+                      placeholder="Mensagem" 
+                      rows={4} 
+                      maxLength={500}
+                      className="resize-none"
+                    />
+                    <p className="mt-1 text-xs text-foreground/60">Máximo 500 caracteres</p>
                   </div>
                   <div className="flex items-start gap-3 text-sm text-foreground/70">
                     <Checkbox id="consent" className="mt-1" />
