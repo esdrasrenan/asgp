@@ -202,6 +202,148 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Seção: Pilares com numeração 01/02/03 */}
+      <section className="bg-background">
+        <div className="mx-auto max-w-[1600px] px-4 md:px-8 py-20 md:py-28">
+          <div className="grid md:grid-cols-3 gap-12 md:gap-16">
+            {/* Item 01 */}
+            <div>
+              <div className="text-2xl md:text-3xl font-medium tracking-tight text-foreground/60">01</div>
+              <div className="mt-4 h-px w-full bg-foreground/15" />
+              <h3 className="mt-6 text-2xl md:text-3xl font-medium tracking-tight text-foreground">Gestão financeira confiável</h3>
+              <p className="mt-3 text-foreground/70 max-w-[52ch]">
+                Simplificamos sua rotina financeira com lançamentos precisos, conciliação
+                diária e relatórios que oferecem uma visão clara da saúde do seu negócio.
+              </p>
+            </div>
+
+            {/* Item 02 */}
+            <div>
+              <div className="text-2xl md:text-3xl font-medium tracking-tight text-foreground/60">02</div>
+              <div className="mt-4 h-px w-full bg-foreground/15" />
+              <h3 className="mt-6 text-2xl md:text-3xl font-medium tracking-tight text-foreground">Processos organizados e seguros</h3>
+              <p className="mt-3 text-foreground/70 max-w-[52ch]">
+                Garantimos o controle de todas as obrigações financeiras da sua empresa,
+                com fluxo de caixa previsível e processos alinhados às melhores práticas do mercado.
+              </p>
+            </div>
+
+            {/* Item 03 */}
+            <div>
+              <div className="text-2xl md:text-3xl font-medium tracking-tight text-foreground/60">03</div>
+              <div className="mt-4 h-px w-full bg-foreground/15" />
+              <h3 className="mt-6 text-2xl md:text-3xl font-medium tracking-tight text-foreground">Planejamento estratégico contínuo</h3>
+              <p className="mt-3 text-foreground/70 max-w-[52ch]">
+                Transformamos dados financeiros em informações estratégicas para apoiar suas
+                decisões e impulsionar o crescimento da sua empresa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção: Clientes (logos) */}
+      <section className="bg-background">
+        <div className="mx-auto max-w-[1600px] px-4 md:px-8 py-14 md:py-20">
+          <div className="grid grid-cols-1 md:grid-cols-6 items-center gap-10 md:gap-14">
+            <p className="md:col-span-1 text-xl md:text-2xl font-medium tracking-tight text-foreground/90">
+              Alguns dos
+              <br className="hidden md:block" />
+              nossos clientes
+            </p>
+
+            <div className="md:col-span-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 items-center justify-items-center gap-12 md:gap-16">
+              <div className="group">
+                <Image
+                  src="/Referência/imgi_2_client-001.png"
+                  alt="Bellway"
+                  width={220}
+                  height={64}
+                  className="h-10 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
+                />
+              </div>
+              <div className="group">
+                <Image
+                  src="/Referência/imgi_3_client-002.png"
+                  alt="GitHub"
+                  width={180}
+                  height={64}
+                  className="h-12 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
+                />
+              </div>
+              <div className="group">
+                <Image
+                  src="/Referência/imgi_4_client-003.png"
+                  alt="Payoneer"
+                  width={220}
+                  height={64}
+                  className="h-10 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
+                />
+              </div>
+              <div className="group">
+                <Image
+                  src="/Referência/imgi_5_client-004.png"
+                  alt="JLL"
+                  width={200}
+                  height={64}
+                  className="h-10 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
+                />
+              </div>
+              <div className="group">
+                <Image
+                  src="/Referência/imgi_6_client-005.png"
+                  alt="Logo cliente"
+                  width={180}
+                  height={64}
+                  className="h-12 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção: Depoimento/Impacto */}
+      <section className="bg-background">
+        <div className="mx-auto max-w-[1600px] px-4 md:px-8 py-20 md:py-28">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center rounded-2xl overflow-hidden border bg-[var(--primary)]">
+            {/* Bloco de texto à esquerda */}
+            <div className="p-8 md:p-14">
+              <Image
+                src="/Referência/imgi_10_testimonials-logo-001.png"
+                alt="Logo do cliente"
+                width={160}
+                height={40}
+                className="h-7 md:h-8 w-auto object-contain opacity-95"
+              />
+              <h3 className="mt-8 text-2xl md:text-3xl lg:text-4xl leading-[1.15] font-medium tracking-tight text-white max-w-[24ch]">
+                A ASGP transformou nossa estratégia financeira, trazendo crescimento e
+                ganhos de eficiência significativos. A expertise da equipe é
+                incomparável.
+              </h3>
+              <div className="mt-8 text-white/80">
+                <p className="font-semibold">Carlos Menezes</p>
+                <p className="text-sm">Diretor Administrativo</p>
+              </div>
+            </div>
+
+            {/* Imagem à direita */}
+            <div className="p-6 md:p-10 lg:p-14">
+              <div className="relative h-[280px] md:h-[500px] lg:h-[560px] rounded-xl overflow-hidden bg-[#07171E] p-2 md:p-4">
+                <Image
+                  src="/Referência/imgi_11_custom-img-050.png"
+                  alt="Ilustração percentual colorida"
+                  fill
+                  sizes="(min-width: 1024px) 38rem, (min-width: 768px) 50vw, 100vw"
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Placeholder next content so page isn’t empty after hero */}
       <main className="container mx-auto px-5 md:px-10 py-16" id="contact">
         <p className="text-muted-foreground">
