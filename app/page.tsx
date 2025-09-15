@@ -49,7 +49,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 items-end gap-6 md:gap-12 min-h-[80svh] pb-0">
               {/* Left title */}
               <div>
-                <h1 className="text-white text-[6.8vw] md:text-[5.2vw] leading-[0.98] font-medium tracking-[-0.03em]">
+                <h1 className="text-white text-[9.2vw] md:text-[5.2vw] leading-[0.98] font-medium tracking-[-0.03em]">
                   <span>BPO Financeiro</span>
                   <br />
                   <span>sem burocracia</span>
@@ -250,13 +250,14 @@ export default function Home() {
         <div className="mx-auto max-w-[1600px] px-4 md:px-8 py-14 md:py-20">
           <div className="grid grid-cols-1 md:grid-cols-6 items-center gap-10 md:gap-14">
             <p className="md:col-span-1 text-xl md:text-2xl font-medium tracking-tight text-foreground/90">
-              Alguns dos
+              <span>Alguns dos</span>
+              <span className="md:hidden"> </span>
               <br className="hidden md:block" />
-              nossos clientes
+              <span>nossos clientes</span>
             </p>
 
-            <div className="md:col-span-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 items-center justify-items-center gap-12 md:gap-16">
-              <div className="group">
+            <div className="md:col-span-5 flex flex-wrap justify-center items-center gap-12 md:gap-16">
+              <div className="group w-1/2 sm:w-1/3 lg:w-1/5 flex justify-center">
                 <Image
                   src="/Referência/imgi_2_client-001.png"
                   alt="Bellway"
@@ -265,7 +266,7 @@ export default function Home() {
                   className="h-10 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
                 />
               </div>
-              <div className="group">
+              <div className="group w-1/2 sm:w-1/3 lg:w-1/5 flex justify-center">
                 <Image
                   src="/Referência/imgi_3_client-002.png"
                   alt="GitHub"
@@ -274,7 +275,7 @@ export default function Home() {
                   className="h-12 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
                 />
               </div>
-              <div className="group">
+              <div className="group w-1/2 sm:w-1/3 lg:w-1/5 flex justify-center">
                 <Image
                   src="/Referência/imgi_4_client-003.png"
                   alt="Payoneer"
@@ -283,7 +284,7 @@ export default function Home() {
                   className="h-10 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
                 />
               </div>
-              <div className="group">
+              <div className="group w-1/2 sm:w-1/3 lg:w-1/5 flex justify-center">
                 <Image
                   src="/Referência/imgi_5_client-004.png"
                   alt="JLL"
@@ -292,7 +293,7 @@ export default function Home() {
                   className="h-10 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
                 />
               </div>
-              <div className="group">
+              <div className="group w-1/2 sm:w-1/3 lg:w-1/5 flex justify-center">
                 <Image
                   src="/Referência/imgi_6_client-005.png"
                   alt="Logo cliente"
