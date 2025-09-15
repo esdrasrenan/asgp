@@ -1,4 +1,7 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import Image from "next/image";
 
 export default function Home() {
@@ -329,7 +332,7 @@ export default function Home() {
 
             {/* Imagem à direita */}
             <div className="p-6 md:p-10 lg:p-14">
-              <div className="relative h-[280px] md:h-[500px] lg:h-[560px] rounded-xl overflow-hidden bg-[#07171E] p-2 md:p-4">
+              <div className="relative h-[280px] md:h-[500px] lg:h-[560px] rounded-xl overflow-hidden p-2 md:p-4">
                 <Image
                   src="/Referência/imgi_11_custom-img-050.png"
                   alt="Ilustração percentual colorida"
@@ -338,6 +341,64 @@ export default function Home() {
                   className="object-contain"
                   priority
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção: CTA com formulário sobre imagem de fundo */}
+      <section id="contato" className="relative bg-background">
+        <div className="relative min-h-[80svh] md:min-h-[90svh]">
+          {/* Imagem de fundo */}
+          <div className="absolute inset-0">
+            <Image
+              src="/Referência/imgi_28_custom-img-051.jpg"
+              alt="Equipe em reunião ao fundo"
+              fill
+              sizes="100vw"
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-black/20" />
+          </div>
+
+          {/* Conteúdo */}
+          <div className="relative z-10 mx-auto max-w-[1600px] px-4 md:px-8 py-16 md:py-24 lg:py-28">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-10 lg:gap-16 items-center">
+              {/* Espaço vazio à esquerda no desktop para simular layout da referência */}
+              <div className="hidden md:block" />
+
+              {/* Card do formulário */}
+              <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 lg:p-10 w-full max-w-[720px] md:justify-self-end">
+                <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground">Tem alguma dúvida?</h3>
+                <p className="mt-1 text-foreground/70">Fale com a gente!</p>
+
+                <form className="mt-6 space-y-4">
+                  <div>
+                    <label className="sr-only" htmlFor="nome">Nome</label>
+                    <Input id="nome" name="nome" type="text" placeholder="Nome" />
+                  </div>
+                  <div>
+                    <label className="sr-only" htmlFor="email">Email</label>
+                    <Input id="email" name="email" type="email" placeholder="Email" />
+                  </div>
+                  <div>
+                    <label className="sr-only" htmlFor="assunto">Assunto</label>
+                    <Input id="assunto" name="assunto" type="text" placeholder="Assunto" />
+                  </div>
+                  <div>
+                    <label className="sr-only" htmlFor="mensagem">Mensagem</label>
+                    <Textarea id="mensagem" name="mensagem" placeholder="Mensagem" rows={4} />
+                  </div>
+                  <div className="flex items-start gap-3 text-sm text-foreground/70">
+                    <Checkbox id="consent" />
+                    <label htmlFor="consent">Autorizo o uso dos meus dados para contato.</label>
+                  </div>
+                  <div className="pt-2">
+                    <Button className="w-full h-12 rounded-lg">Enviar mensagem</Button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
