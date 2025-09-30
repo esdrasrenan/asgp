@@ -392,8 +392,8 @@ export default function Home() {
         </div>
 
         <div className="mx-auto max-w-[1600px] px-4 md:px-8 py-12 md:py-16">
-          <div className="grid gap-16 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
-            <div className="space-y-6">
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1.1fr)_minmax(0,0.9fr)]">
+            <div className="space-y-6 max-w-[600px]">
               <a href="#" aria-label="ASGF" className="inline-flex max-w-full">
                 <span className="block w-[5rem] md:w-[7rem]">
                   <Image
@@ -410,78 +410,70 @@ export default function Home() {
                 <p>
                   Especialistas em terceirização financeira (BPO), unimos tecnologia, precisão e cuidado humano para apoiar empresas em cada fase do crescimento.
                 </p>
-                <div className="grid gap-4 sm:grid-cols-2 text-sm text-foreground/80">
-                  <div className="flex items-center gap-3">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[var(--primary)]/12 text-[var(--primary)]">
-                      <Mail className="h-4 w-4" aria-hidden />
-                    </span>
-                    <div>
-                      <span className="font-semibold text-foreground">E-mail</span>
-                      <div>
-                        <a href="mailto:alexandre.adm@asgf.com.br" className="hover:text-foreground">
-                          alexandre.adm@asgf.com.br
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[var(--primary)]/12 text-[var(--primary)]">
-                      <Phone className="h-4 w-4" aria-hidden />
-                    </span>
-                    <div>
-                      <span className="font-semibold text-foreground">Telefone</span>
-                      <div>
-                        <a href="tel:+551141735366" className="hover:text-foreground">
-                          (11) 4173-5366
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[var(--primary)]/12 text-[var(--primary)]">
-                      <Smartphone className="h-4 w-4" aria-hidden />
-                    </span>
-                    <div>
-                      <span className="font-semibold text-foreground">Celular</span>
-                      <div>
-                        <a href="tel:+5511959611178" className="hover:text-foreground">
-                          (11) 95961-1178
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[var(--primary)]/12 text-[var(--primary)]">
-                      <MapPin className="h-4 w-4" aria-hidden />
-                    </span>
-                    <div>
-                      <span className="font-semibold text-foreground">Endereço</span>
-                      <div>
-                        Alameda Terracota, 185 - Sala 1213
-                        <br />
-                        Cerâmica - São Caetano do Sul/SP - CEP 09531-190
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[var(--primary)]/12 text-[var(--primary)]">
-                      <Globe className="h-4 w-4" aria-hidden />
-                    </span>
-                    <div>
-                      <span className="font-semibold text-foreground">Site</span>
-                      <div>
-                        <a href="https://asgf.com.br" className="hover:text-foreground" target="_blank" rel="noreferrer">
-                          asgf.com.br
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
-            <div className="space-y-5 md:pt-8">
+            <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6 lg:self-start">
+              {[
+                {
+                  icon: Mail,
+                  label: "E-mail",
+                  value: (
+                    <a href="mailto:alexandre.adm@asgf.com.br" className="hover:text-foreground">
+                      alexandre.adm@asgf.com.br
+                    </a>
+                  ),
+                },
+                {
+                  icon: Phone,
+                  label: "Telefone",
+                  value: (
+                    <a href="tel:+551141735366" className="hover:text-foreground">
+                      (11) 4173-5366
+                    </a>
+                  ),
+                },
+                {
+                  icon: Smartphone,
+                  label: "Celular",
+                  value: (
+                    <a href="tel:+5511959611178" className="hover:text-foreground">
+                      (11) 95961-1178
+                    </a>
+                  ),
+                },
+                {
+                  icon: MapPin,
+                  label: "Endereço",
+                  value: (
+                    <span>
+                      Alameda Terracota, 185 - Sala 1213
+                      <br />
+                      Cerâmica - São Caetano do Sul/SP - CEP 09531-190
+                    </span>
+                  ),
+                },
+                {
+                  icon: Globe,
+                  label: "Site",
+                  value: (
+                    <a href="https://asgf.com.br" className="hover:text-foreground" target="_blank" rel="noreferrer">
+                      asgf.com.br
+                    </a>
+                  ),
+                },
+              ].map(({ icon: Icon, label, value }) => (
+                <div key={label} className="flex items-start gap-3 text-sm text-foreground/80">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[var(--primary)]/12 text-[var(--primary)]">
+                    <Icon className="h-4 w-4" aria-hidden />
+                  </span>
+                  <div>
+                    <span className="font-semibold text-foreground">{label}</span>
+                    <div className="mt-0.5">{value}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="space-y-5 lg:self-start lg:pt-10">
               <h4 className="text-base font-semibold text-foreground">Fale com a ASGF</h4>
               <p className="text-sm text-foreground/70 max-w-[50ch]">
                 Entre em contato para entender como nosso time especializado pode simplificar sua rotina financeira e apoiar o crescimento do seu negócio.
@@ -497,14 +489,11 @@ export default function Home() {
           <div className="mt-12 pt-8 border-t border-border/60 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between text-xs sm:text-sm text-foreground/60">
             <p>© {currentYear} ASGF. Todos os direitos reservados.</p>
             <div className="flex flex-wrap gap-x-6 gap-y-2">
-              <a href="#" className="hover:text-foreground">
+              <a href="/politica-de-privacidade" className="hover:text-foreground">
                 Política de privacidade
               </a>
-              <a href="#" className="hover:text-foreground">
+              <a href="/termos-de-uso" className="hover:text-foreground">
                 Termos de uso
-              </a>
-              <a href="#" className="hover:text-foreground">
-                LinkedIn
               </a>
             </div>
           </div>
