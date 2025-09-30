@@ -26,15 +26,16 @@ export default function Home() {
 
         <div className="relative z-10">
           {/* Top bar */}
-          <header className="mx-auto max-w-[1600px] flex items-center justify-between px-4 md:px-8 py-7 md:py-8 text-white">
-            <a href="#" aria-label="ASGF" className="inline-flex shrink-0">
-              <span className="relative block h-10 w-36 md:h-12 md:w-48">
+          <header className="mx-auto max-w-[1600px] flex items-center justify-between px-4 md:px-8 pt-3 md:pt-4 pb-5 md:pb-6 text-white">
+            <a href="#" aria-label="ASGF" className="inline-flex shrink-0 max-w-full">
+              <span className="block w-[5rem] sm:w-[7rem] md:w-[9rem]">
                 <Image
-                  src="/Referencia/ASGF_Logo_Oficial.svg"
+                  src="/Referencia/ASGF_03.png"
                   alt="Logotipo ASGF"
-                  fill
-                  sizes="(min-width: 768px) 12rem, 9rem"
-                  className="object-contain"
+                  width={1200}
+                  height={400}
+                  sizes="(min-width: 1280px) 9rem, (min-width: 768px) 7rem, 5rem"
+                  className="h-auto w-full"
                   priority
                 />
               </span>
@@ -44,7 +45,6 @@ export default function Home() {
                 ["Home", "#"],
                 ["Serviços", "#servicos"],
                 ["Empresa", "#empresa"],
-                ["Equipe", "#equipe"],
                 ["Contato", "#contato"],
               ].map(([label, href]) => (
                 <a key={label} href={href} className="hover:text-white">
@@ -56,7 +56,7 @@ export default function Home() {
 
           {/* Two-column layout: left title, right description + CTA */}
           <div className="mx-auto max-w-[1600px] px-4 md:px-8">
-            <div className="grid md:grid-cols-2 items-end gap-6 md:gap-12 min-h-[80svh] pb-0">
+            <div className="grid md:grid-cols-2 items-end gap-6 md:gap-12 min-h-[70svh] md:min-h-[75svh] pb-12 md:pb-16">
               {/* Left title */}
               <div>
                 <h1 className="text-white text-[10.5vw] md:text-[5.2vw] leading-[0.98] font-medium tracking-[-0.03em]">
@@ -254,68 +254,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Seção: Clientes (logos) */}
-      <section id="clientes" className="bg-background">
-        <div className="mx-auto max-w-[1600px] px-4 md:px-8 py-14 md:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-6 items-center gap-10 md:gap-14">
-            <p className="md:col-span-1 text-xl md:text-2xl font-medium tracking-tight text-foreground/90">
-              <span>Alguns dos</span>
-              <span className="md:hidden"> </span>
-              <br className="hidden md:block" />
-              <span>nossos clientes</span>
-            </p>
-
-            <div className="md:col-span-5 grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-12 md:gap-16 justify-items-center">
-              <div className="group max-w-[220px] w-full justify-self-center flex justify-center">
-                <Image
-                  src="/Referencia/imgi_2_client-001.png"
-                  alt="Bellway"
-                  width={220}
-                  height={64}
-                  className="h-10 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
-                />
-              </div>
-              <div className="group max-w-[220px] w-full justify-self-center flex justify-center">
-                <Image
-                  src="/Referencia/imgi_3_client-002.png"
-                  alt="GitHub"
-                  width={180}
-                  height={64}
-                  className="h-12 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
-                />
-              </div>
-              <div className="group max-w-[220px] w-full justify-self-center flex justify-center">
-                <Image
-                  src="/Referencia/imgi_4_client-003.png"
-                  alt="Payoneer"
-                  width={220}
-                  height={64}
-                  className="h-10 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
-                />
-              </div>
-              <div className="group max-w-[220px] w-full justify-self-center flex justify-center">
-                <Image
-                  src="/Referencia/imgi_5_client-004.png"
-                  alt="JLL"
-                  width={200}
-                  height={64}
-                  className="h-10 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
-                />
-              </div>
-              <div className="group max-w-[220px] w-full justify-self-center flex justify-center">
-                <Image
-                  src="/Referencia/imgi_6_client-005.png"
-                  alt="Logo cliente"
-                  width={180}
-                  height={64}
-                  className="h-12 md:h-14 w-auto object-contain opacity-80 transition duration-200 filter [filter:grayscale(1)_sepia(1)_hue-rotate(190deg)_saturate(2)_brightness(0.95)] group-hover:[filter:none] group-hover:opacity-100"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Seção: Depoimento/Impacto */}
       <section className="bg-background">
         <div className="mx-auto max-w-[1600px] px-4 md:px-8 py-20 md:py-28">
@@ -437,20 +375,7 @@ export default function Home() {
                 <p className="text-foreground/80 max-w-[60ch]">
                   Estruturamos o seu BPO financeiro do planejamento ao acompanhamento diário para que você tome decisões com confiança e foco em crescimento.
                 </p>
-                <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-                  <Button
-                    asChild
-                    className="h-12 px-6 sm:px-8 rounded-full bg-[var(--primary)] text-white hover:bg-[var(--primary)]/90"
-                  >
-                    <a href="#contato">Agende uma conversa</a>
-                  </Button>
-                  <Button
-                    asChild
-                    className="h-12 px-6 sm:px-8 rounded-full border border-foreground/20 bg-transparent text-foreground hover:bg-foreground/10"
-                  >
-                    <a href="#newsletter">Enviar</a>
-                  </Button>
-                </div>
+                <div className="h-2" aria-hidden />
               </div>
               <div className="relative h-[260px] sm:h-[320px] md:h-[360px] lg:h-[420px] overflow-hidden rounded-3xl border border-border/60 bg-white">
                 <Image
@@ -467,33 +392,36 @@ export default function Home() {
         </div>
 
         <div className="mx-auto max-w-[1600px] px-4 md:px-8 py-12 md:py-16">
-          <div className="grid gap-12 md:grid-cols-[minmax(0,1.6fr)_repeat(3,minmax(0,1fr))]">
+          <div className="grid gap-16 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
             <div className="space-y-6">
-              <a href="#" aria-label="ASGF" className="inline-flex">
-                <span className="relative block h-20 w-[16rem] md:h-24 md:w-[18rem]">
+              <a href="#" aria-label="ASGF" className="inline-flex max-w-full">
+                <span className="block w-[5rem] md:w-[7rem]">
                   <Image
-                    src="/Referencia/ASGF_Logo_Oficial.svg"
+                    src="/Referencia/ASGF_01.png"
                     alt="Logotipo ASGF"
-                    fill
-                    sizes="(min-width: 768px) 18rem, 16rem"
-                    className="object-contain"
+                    width={1200}
+                    height={400}
+                    sizes="(min-width: 768px) 7rem, 5rem"
+                    className="h-auto w-full"
                   />
                 </span>
               </a>
-              <div className="text-sm text-foreground/75 space-y-4 max-w-[52ch]">
+              <div className="text-sm text-foreground/75 max-w-[52ch] space-y-4">
                 <p>
                   Especialistas em terceirização financeira (BPO), unimos tecnologia, precisão e cuidado humano para apoiar empresas em cada fase do crescimento.
                 </p>
-                <div className="space-y-3">
+                <div className="grid gap-4 sm:grid-cols-2 text-sm text-foreground/80">
                   <div className="flex items-center gap-3">
                     <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[var(--primary)]/12 text-[var(--primary)]">
                       <Mail className="h-4 w-4" aria-hidden />
                     </span>
                     <div>
-                      <span className="font-semibold text-foreground">E-mail:</span>{" "}
-                      <a href="mailto:alexandre.adm@asgp.com.br" className="hover:text-foreground">
-                        alexandre.adm@asgp.com.br
-                      </a>
+                      <span className="font-semibold text-foreground">E-mail</span>
+                      <div>
+                        <a href="mailto:alexandre.adm@asgf.com.br" className="hover:text-foreground">
+                          alexandre.adm@asgf.com.br
+                        </a>
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -501,10 +429,12 @@ export default function Home() {
                       <Phone className="h-4 w-4" aria-hidden />
                     </span>
                     <div>
-                      <span className="font-semibold text-foreground">Telefone:</span>{" "}
-                      <a href="tel:+551141735366" className="hover:text-foreground">
-                        (11) 4173-5366
-                      </a>
+                      <span className="font-semibold text-foreground">Telefone</span>
+                      <div>
+                        <a href="tel:+551141735366" className="hover:text-foreground">
+                          (11) 4173-5366
+                        </a>
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -512,23 +442,27 @@ export default function Home() {
                       <Smartphone className="h-4 w-4" aria-hidden />
                     </span>
                     <div>
-                      <span className="font-semibold text-foreground">Celular:</span>{" "}
-                      <a href="tel:+5511959611178" className="hover:text-foreground">
-                        (11) 95961-1178
-                      </a>
+                      <span className="font-semibold text-foreground">Celular</span>
+                      <div>
+                        <a href="tel:+5511959611178" className="hover:text-foreground">
+                          (11) 95961-1178
+                        </a>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
                     <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[var(--primary)]/12 text-[var(--primary)]">
                       <MapPin className="h-4 w-4" aria-hidden />
                     </span>
                     <div>
-                      <span className="font-semibold text-foreground">Endereço:</span>{" "}
-                      <span>
+                      <span className="font-semibold text-foreground">Endereço</span>
+                      <div>
                         Alameda Terracota, 185 - Sala 1213
                         <br />
                         Cerâmica - São Caetano do Sul/SP - CEP 09531-190
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -536,96 +470,27 @@ export default function Home() {
                       <Globe className="h-4 w-4" aria-hidden />
                     </span>
                     <div>
-                      <span className="font-semibold text-foreground">Site:</span>{" "}
-                      <a href="https://www.asgp.com.br" className="hover:text-foreground" target="_blank" rel="noreferrer">
-                        www.asgp.com.br
-                      </a>
+                      <span className="font-semibold text-foreground">Site</span>
+                      <div>
+                        <a href="https://asgf.com.br" className="hover:text-foreground" target="_blank" rel="noreferrer">
+                          asgf.com.br
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div className="space-y-5">
-              <h4 className="text-base font-semibold text-foreground">Serviços</h4>
-              <ul className="space-y-3 text-sm text-foreground/70">
-                <li>
-                  <a href="#servicos" className="hover:text-foreground">
-                    BPO financeiro completo
-                  </a>
-                </li>
-                <li>
-                  <a href="#servicos" className="hover:text-foreground">
-                    Gestão de contas a pagar e a receber
-                  </a>
-                </li>
-                <li>
-                  <a href="#servicos" className="hover:text-foreground">
-                    Conciliação bancária diária
-                  </a>
-                </li>
-                <li>
-                  <a href="#servicos" className="hover:text-foreground">
-                    Relatórios e indicadores gerenciais
-                  </a>
-                </li>
-                <li>
-                  <a href="#servicos" className="hover:text-foreground">
-                    Treinamento e implantação de processos
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-
-            <div className="space-y-5">
-              <h4 className="text-base font-semibold text-foreground">Empresa</h4>
-              <ul className="space-y-3 text-sm text-foreground/70">
-                <li>
-                  <a href="#empresa" className="hover:text-foreground">
-                    Sobre a ASGF
-                  </a>
-                </li>
-                <li>
-                  <a href="#clientes" className="hover:text-foreground">
-                    Nossos clientes
-                  </a>
-                </li>
-                <li>
-                  <a href="#contato" className="hover:text-foreground">
-                    Fale com a equipe
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-foreground">
-                    Carreiras
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div id="newsletter" className="space-y-5">
-              <h4 className="text-base font-semibold text-foreground">Newsletter / Insights</h4>
+            <div className="space-y-5 md:pt-8">
+              <h4 className="text-base font-semibold text-foreground">Fale com a ASGF</h4>
+              <p className="text-sm text-foreground/70 max-w-[50ch]">
+                Entre em contato para entender como nosso time especializado pode simplificar sua rotina financeira e apoiar o crescimento do seu negócio.
+              </p>
               <div className="space-y-3 text-sm text-foreground/70">
-                <p>
-                  Dicas sobre gestão financeira, automação de processos e boas práticas enviadas diretamente no seu e-mail.
-                </p>
+                <Button asChild className="h-11 px-6 rounded-full bg-[var(--primary)] text-white hover:bg-[var(--primary)]/90">
+                  <a href="#contato">Fale conosco</a>
+                </Button>
               </div>
-              <form className="space-y-3" noValidate>
-                <div className="flex flex-col sm:flex-row sm:items-center sm:max-w-[420px] sm:rounded-full sm:bg-white sm:border sm:border-border/60 sm:p-1.5 sm:gap-2 sm:shadow-sm">
-                  <Input
-                    type="email"
-                    placeholder="Seu melhor e-mail"
-                    className="bg-white border-border text-foreground placeholder:text-foreground/60 focus-visible:ring-[var(--primary)]/40 focus-visible:ring-offset-0 sm:flex-1 sm:border-0 sm:bg-transparent sm:rounded-full sm:h-11 sm:px-5"
-                  />
-                  <Button
-                    type="submit"
-                    className="w-full sm:w-auto sm:h-11 sm:rounded-full bg-[var(--primary)] text-white hover:bg-[var(--primary)]/90"
-                  >
-                    Enviar
-                  </Button>
-                </div>
-              </form>
             </div>
           </div>
 
