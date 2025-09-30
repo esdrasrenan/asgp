@@ -30,7 +30,7 @@ export default function Home() {
             <a href="#" aria-label="ASGF" className="inline-flex shrink-0">
               <span className="relative block h-10 w-36 md:h-12 md:w-48">
                 <Image
-                  src="/Referencia/ASGF_V12.png"
+                  src="/Referencia/ASGF_Logo_Oficial.svg"
                   alt="Logotipo ASGF"
                   fill
                   sizes="(min-width: 768px) 12rem, 9rem"
@@ -472,7 +472,7 @@ export default function Home() {
               <a href="#" aria-label="ASGF" className="inline-flex">
                 <span className="relative block h-20 w-[16rem] md:h-24 md:w-[18rem]">
                   <Image
-                    src="/Referencia/ASGF_V12.png"
+                    src="/Referencia/ASGF_Logo_Oficial.svg"
                     alt="Logotipo ASGF"
                     fill
                     sizes="(min-width: 768px) 18rem, 16rem"
