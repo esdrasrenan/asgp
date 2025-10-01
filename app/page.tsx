@@ -74,10 +74,7 @@ export default function Home() {
                     <span style={{ color: "#69b8e6" }}>— o crescimento do seu negócio.</span>
                   </p>
                 </div>
-                <Button
-                  asChild
-                  className="h-12 md:h-14 px-8 md:px-10 text-base md:text-lg rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
-                >
+                <Button asChild className="h-12 md:h-14 px-8 md:px-10 text-base md:text-lg rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
                   <a href="#contato">Fale conosco</a>
                 </Button>
               </div>
@@ -494,6 +491,32 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      <a
+        href="https://wa.me/5511959611178"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Conversar com a ASGF pelo WhatsApp"
+        className="group fixed bottom-6 right-6 z-50"
+      >
+        <span className="relative flex h-14 w-14 items-center justify-center">
+          <span
+            className="pointer-events-none absolute inset-0 rounded-full border border-white/0 bg-gradient-to-tr from-[#63ff9c] via-[#25d366] to-[#0d5c37] opacity-90 animate-spin"
+            style={{ animationDuration: "6s" }}
+            aria-hidden
+          />
+          <span className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-105 group-active:scale-95">
+            <Image
+              src="/Referencia/whatsapp.svg"
+              alt="WhatsApp"
+              width={48}
+              height={48}
+              className="h-12 w-12"
+              priority
+            />
+          </span>
+        </span>
+      </a>
     </div>
   );
 }
