@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import Image from "next/image";
-import { Globe, Mail, MapPin, Phone, Smartphone } from "lucide-react";
+import { Globe, Mail, MapPin, Smartphone } from "lucide-react";
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
@@ -30,7 +30,7 @@ export default function Home() {
             <a href="#" aria-label="ASGF" className="inline-flex shrink-0 max-w-full">
               <span className="block w-[5rem] sm:w-[7rem] md:w-[9rem]">
                 <Image
-                  src="/Referencia/ASGF_03.png"
+                  src="/Referencia/ASGF_03_branco.png"
                   alt="Logotipo ASGF"
                   width={1200}
                   height={400}
@@ -71,7 +71,7 @@ export default function Home() {
                 <div className="mb-8 space-y-1.5 md:space-y-2">
                   <p className="text-[22px] md:text-[26px] lg:text-[28px] leading-[1.15] font-medium text-white">
                     Cuidamos da burocracia para você focar no que realmente importa{" "}
-                    <span style={{ color: "var(--primary)" }}>— o crescimento do seu negócio.</span>
+                    <span style={{ color: "#69b8e6" }}>— o crescimento do seu negócio.</span>
                   </p>
                 </div>
                 <Button
@@ -392,12 +392,12 @@ export default function Home() {
         </div>
 
         <div className="mx-auto max-w-[1600px] px-4 md:px-8 py-12 md:py-16">
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1.1fr)_minmax(0,0.9fr)]">
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.35fr)_minmax(0,0.85fr)]">
             <div className="space-y-6 max-w-[600px]">
               <a href="#" aria-label="ASGF" className="inline-flex max-w-full">
                 <span className="block w-[5rem] md:w-[7rem]">
                   <Image
-                    src="/Referencia/ASGF_01.png"
+                    src="/Referencia/ASGF_01_azul.png"
                     alt="Logotipo ASGF"
                     width={1200}
                     height={400}
@@ -412,7 +412,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6 lg:self-start">
+            <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6 lg:self-stretch">
               {[
                 {
                   icon: Mail,
@@ -420,15 +420,6 @@ export default function Home() {
                   value: (
                     <a href="mailto:alexandre.adm@asgf.com.br" className="hover:text-foreground">
                       alexandre.adm@asgf.com.br
-                    </a>
-                  ),
-                },
-                {
-                  icon: Phone,
-                  label: "Telefone",
-                  value: (
-                    <a href="tel:+551141735366" className="hover:text-foreground">
-                      (11) 4173-5366
                     </a>
                   ),
                 },
@@ -452,18 +443,9 @@ export default function Home() {
                     </span>
                   ),
                 },
-                {
-                  icon: Globe,
-                  label: "Site",
-                  value: (
-                    <a href="https://asgf.com.br" className="hover:text-foreground" target="_blank" rel="noreferrer">
-                      asgf.com.br
-                    </a>
-                  ),
-                },
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="flex items-start gap-3 text-sm text-foreground/80">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[var(--primary)]/12 text-[var(--primary)]">
+                  <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--primary)]/12 text-[var(--primary)]">
                     <Icon className="h-4 w-4" aria-hidden />
                   </span>
                   <div>
@@ -472,8 +454,21 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+              <div className="flex items-center gap-3 text-sm text-foreground/80">
+                <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--primary)]/12 text-[var(--primary)]">
+                  <Globe className="h-4 w-4" aria-hidden />
+                </span>
+                <div>
+                  <span className="font-semibold text-foreground">Site</span>
+                  <div className="mt-0.5">
+                    <a href="https://asgf.com.br" className="hover:text-foreground" target="_blank" rel="noreferrer">
+                      asgf.com.br
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="space-y-5 lg:self-start lg:pt-10">
+            <div className="space-y-5 lg:flex lg:flex-col lg:justify-center lg:self-stretch">
               <h4 className="text-base font-semibold text-foreground">Fale com a ASGF</h4>
               <p className="text-sm text-foreground/70 max-w-[50ch]">
                 Entre em contato para entender como nosso time especializado pode simplificar sua rotina financeira e apoiar o crescimento do seu negócio.
