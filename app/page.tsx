@@ -3,13 +3,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import Image from "next/image";
-import { Globe, Mail, MapPin, Smartphone } from "lucide-react";
+import { ArrowUp, Globe, Mail, MapPin, Smartphone } from "lucide-react";
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="min-h-dvh bg-background text-foreground">
+    <div id="top" className="min-h-dvh bg-background text-foreground">
       {/* Hero with background image + overlay */}
       <section
         className="relative min-h-screen"
@@ -491,6 +491,23 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      <a
+        href="#top"
+        aria-label="Voltar ao topo"
+        className="group fixed bottom-24 right-6 z-40"
+      >
+        <span className="relative flex h-12 w-12 items-center justify-center">
+          <span
+            className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-tr from-[#2d6aa0] via-[#124374] to-[#09243f] opacity-90 animate-spin"
+            style={{ animationDuration: "6s" }}
+            aria-hidden
+          />
+          <span className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-[#124374] text-white shadow-lg shadow-[#124374]/30 transition-transform duration-300 group-hover:scale-105 group-active:scale-95">
+            <ArrowUp className="h-5 w-5" aria-hidden />
+          </span>
+        </span>
+      </a>
 
       <a
         href="https://wa.me/5511959611178"
