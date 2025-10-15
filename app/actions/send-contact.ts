@@ -11,7 +11,8 @@ const requiredEnvVars = ['RESEND_API_KEY', 'RESEND_FROM', 'CONTACT_TO'] as const
 
 function validateEnv(): string | null {
   for (const key of requiredEnvVars) {
-    if (!process.env[key] || process.env[key]!.trim() === '') {
+    const value = process.env[key]
+    if (!value || value.trim() === '') {
       return `Variável de ambiente ${key} não configurada.`
     }
   }
@@ -31,11 +32,17 @@ export async function sendContactAction(
     }
   }
 
-  const name = formData.get('nome')?.toString().trim() ?? ''
-  const email = formData.get('email')?.toString().trim() ?? ''
-  const subject = formData.get('assunto')?.toString().trim() ?? ''
-  const message = formData.get('mensagem')?.toString().trim() ?? ''
-  const consent = formData.get('consent')?.toString() === 'true'
+  const nomeEntry = formData.get('nome')
+  const emailEntry = formData.get('email')
+  const subjectEntry = formData.get('assunto')
+  const messageEntry = formData.get('mensagem')
+  const consentEntry = formData.get('consent')
+
+  const name = typeof nomeEntry === 'string' ? nomeEntry.trim() : ''
+  const email = typeof emailEntry === 'string' ? emailEntry.trim() : ''
+  const subject = typeof subjectEntry === 'string' ? subjectEntry.trim() : ''
+  const message = typeof messageEntry === 'string' ? messageEntry.trim() : ''
+  const consent = typeof consentEntry === 'string' ? consentEntry === 'true' : false
 
   if (!name || !email || !message) {
     return {
