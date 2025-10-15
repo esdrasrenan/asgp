@@ -94,7 +94,7 @@ export function ContactForm() {
       </div>
       {state.status !== 'idle' ? (
         <div
-          className={`text-sm ${state.status === 'success' ? 'text-emerald-600' : 'text-destructive'}`}
+          className={`text-sm text-center ${state.status === 'success' ? 'text-emerald-600' : 'text-destructive'}`}
           role="status"
           aria-live="polite"
         >
