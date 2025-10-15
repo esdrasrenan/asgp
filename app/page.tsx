@@ -1,12 +1,49 @@
+import { ContactForm } from "@/components/contact/contact-form";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Marquee } from "@/components/ui/marquee";
 import Image from "next/image";
 import { ArrowUp, Globe, Mail, MapPin, Smartphone } from "lucide-react";
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
+  const partnerLogos = [
+    {
+      name: "Paulicon",
+      src: "/Parceiros%20-%20Site%20ASGF/1.png",
+      alt: "Logo Paulicon",
+      href: "https://paulicon.com.br",
+    },
+    {
+      name: "Omie",
+      src: "/Parceiros%20-%20Site%20ASGF/2.png",
+      alt: "Logo Omie",
+      href: "https://www.omie.com.br",
+    },
+    {
+      name: "Paulicon Treinamento",
+      src: "/Parceiros%20-%20Site%20ASGF/3.png",
+      alt: "Logo Paulicon Treinamento",
+      href: "https://paulicontreinamento.com.br",
+    },
+    {
+      name: "Paulicon Corretora",
+      src: "/Parceiros%20-%20Site%20ASGF/4.png",
+      alt: "Logo Paulicon Corretora",
+      href: "https://pauliconcorretora.com.br",
+    },
+    {
+      name: "Rever",
+      src: "/Parceiros%20-%20Site%20ASGF/5.png",
+      alt: "Logo Rever",
+      href: "https://rever.com.br",
+    },
+    {
+      name: "MFB Advogados",
+      src: "/Parceiros%20-%20Site%20ASGF/6.png",
+      alt: "Logo MFB Advogados",
+      href: "https://mfbadvogados.com.br",
+    },
+  ];
 
   return (
     <div id="top" className="min-h-dvh bg-background text-foreground">
@@ -114,8 +151,8 @@ export default function Home() {
               </h3>
               <div className="my-6 h-px bg-foreground/15" />
               <p className="text-foreground/70">
-                Cuidamos de todas as rotinas financeiras do seu negócio, garantindo
-                pagamentos em dia, controle de recebimentos e fluxo de caixa organizado.
+                Cuidamos de todas as rotinas financeiras do seu negócio, com controle de
+                recebimentos e fluxo de caixa organizado.
               </p>
             </div>
 
@@ -251,47 +288,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Seção: Depoimento/Impacto */}
-      <section className="bg-background">
-        <div className="mx-auto max-w-[1600px] px-4 md:px-8 py-20 md:py-28">
-          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center rounded-2xl overflow-hidden border bg-[var(--primary)]">
-            {/* Bloco de texto à esquerda */}
-            <div className="p-8 md:p-14">
-              <Image
-                src="/Referencia/imgi_10_testimonials-logo-001.png"
-                alt="Logo do cliente"
-                width={160}
-                height={40}
-                className="h-7 md:h-8 w-auto object-contain opacity-95"
-              />
-              <h3 className="mt-8 text-2xl md:text-3xl lg:text-4xl leading-[1.15] font-medium tracking-tight text-white max-w-[24ch]">
-                A ASGF transformou nossa estratégia financeira, trazendo crescimento e
-                ganhos de eficiência significativos. A expertise da equipe é
-                incomparável.
-              </h3>
-              <div className="mt-8 text-white/80">
-                <p className="font-semibold">Carlos Menezes</p>
-                <p className="text-sm">Diretor Administrativo</p>
-              </div>
-            </div>
-
-            {/* Imagem à direita */}
-            <div className="p-6 md:p-10 lg:p-14">
-              <div className="relative h-[280px] md:h-[500px] lg:h-[560px] rounded-xl overflow-hidden p-2 md:p-4">
-                <Image
-                  src="/Referencia/imgi_11_custom-img-050.png"
-                  alt="Ilustração percentual colorida"
-                  fill
-                  sizes="(min-width: 1024px) 38rem, (min-width: 768px) 50vw, 100vw"
-                  className="object-contain"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Seção: CTA com formulário sobre imagem de fundo */}
       <section id="contato" className="relative bg-background">
         <div className="relative min-h-[80svh] md:min-h-[90svh]">
@@ -318,40 +314,7 @@ export default function Home() {
               <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 lg:p-10 w-full max-w-[720px] md:justify-self-end">
                 <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground">Tem alguma dúvida?</h3>
                 <p className="mt-1 text-foreground/70">Fale com a gente!</p>
-
-                <form className="mt-6 space-y-4">
-                  <div>
-                    <label className="sr-only" htmlFor="nome">Nome</label>
-                    <Input id="nome" name="nome" type="text" placeholder="Nome" />
-                  </div>
-                  <div>
-                    <label className="sr-only" htmlFor="email">Email</label>
-                    <Input id="email" name="email" type="email" placeholder="Email" />
-                  </div>
-                  <div>
-                    <label className="sr-only" htmlFor="assunto">Assunto</label>
-                    <Input id="assunto" name="assunto" type="text" placeholder="Assunto" />
-                  </div>
-                  <div>
-                    <label className="sr-only" htmlFor="mensagem">Mensagem</label>
-                    <Textarea 
-                      id="mensagem" 
-                      name="mensagem" 
-                      placeholder="Mensagem" 
-                      rows={4} 
-                      maxLength={500}
-                      className="resize-none"
-                    />
-                    <p className="mt-1 text-xs text-foreground/60">Máximo 500 caracteres</p>
-                  </div>
-                  <div className="flex items-start gap-3 text-sm text-foreground/70">
-                    <Checkbox id="consent" className="mt-1" />
-                    <label htmlFor="consent" className="leading-6">Autorizo o uso dos meus dados para contato.</label>
-                  </div>
-                  <div className="pt-2">
-                    <Button className="w-full h-12 rounded-lg">Enviar mensagem</Button>
-                  </div>
-                </form>
+                <ContactForm />
               </div>
             </div>
           </div>
@@ -359,20 +322,82 @@ export default function Home() {
       </section>
 
 
+      {/* Seção: Parceiros */}
+      <section className="bg-background">
+        <div className="mx-auto max-w-[1600px] px-4 md:px-8 py-16 md:py-20">
+          <span className="block text-center text-xs md:text-sm font-medium tracking-[0.08em] uppercase text-[var(--primary)]">
+            Nossos parceiros
+          </span>
+          <div className="mt-10 space-y-6">
+            <div className="grid grid-cols-2 gap-6 sm:gap-8 sm:hidden">
+              {partnerLogos.map((partner) => (
+                <a
+                  key={`grid-${partner.href}`}
+                  href={partner.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label={`Visitar site ${partner.name}`}
+                  className="flex items-center justify-center rounded-lg border border-border/60 bg-white/60 px-3 py-6 transition-transform duration-200 hover:scale-[1.02] focus-visible:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                >
+                  <Image
+                    src={partner.src}
+                    alt={partner.alt}
+                    width={360}
+                    height={220}
+                    className="h-24 w-auto object-contain opacity-95"
+                  />
+                </a>
+              ))}
+            </div>
+
+            <Marquee
+              pauseOnHover
+              speed={35}
+              repeat={false}
+              className="hidden sm:block"
+            >
+              {partnerLogos.map((partner) => (
+                <a
+                  key={partner.href}
+                  href={partner.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label={`Visitar site ${partner.name}`}
+                  className="flex items-center justify-center transition-transform duration-200 hover:scale-[1.04] focus-visible:scale-[1.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary/40 focus-visible:ring-offset-background"
+                >
+                  <Image
+                    src={partner.src}
+                    alt={partner.alt}
+                    width={380}
+                    height={220}
+                    className="h-24 sm:h-28 md:h-32 w-auto object-contain opacity-95"
+                  />
+                </a>
+              ))}
+            </Marquee>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-[#f3f7fb] text-foreground">
         <div className="border-b border-border/60">
           <div className="mx-auto max-w-[1600px] px-4 md:px-8 py-16 md:py-20">
             <div className="grid gap-8 md:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] items-center">
               <div className="space-y-5">
-                <span className="text-xs md:text-sm font-medium tracking-[0.08em] uppercase text-[var(--primary)]">Pronto para avançar?</span>
+                <span className="text-xs md:text-sm font-medium tracking-[0.08em] uppercase text-[var(--primary)]">Pronto para avançar</span>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground max-w-[28ch]">
-                  Simplifique sua rotina financeira com a ASGF
+                  Simplifique sua rotina financeira com a ASGF.
                 </h2>
                 <p className="text-foreground/80 max-w-[60ch]">
-                  Estruturamos o seu BPO financeiro do planejamento ao acompanhamento diário para que você tome decisões com confiança e foco em crescimento.
+                  Cuidamos de todo o seu BPO financeiro — do planejamento ao acompanhamento diário — para que você tenha clareza nas decisões e foco no crescimento.
                 </p>
-                <div className="h-2" aria-hidden />
+                <p className="text-sm md:text-base font-semibold text-[var(--primary)] mt-5 tracking-wide uppercase">
+                  Custo x benefício
+                </p>
+                <p className="text-foreground/80 max-w-[60ch]">
+                  Ao terceirizar seus processos financeiros, você reduz custos com estrutura e equipe, elimina retrabalhos e ganha eficiência. Assim, pode direcionar seus recursos e energia para o que realmente gera valor — o crescimento do seu negócio.
+                </p>
               </div>
               <div className="relative h-[260px] sm:h-[320px] md:h-[360px] lg:h-[420px] overflow-hidden rounded-3xl border border-border/60 bg-white">
                 <Image
@@ -537,4 +562,6 @@ export default function Home() {
     </div>
   );
 }
+
+
 
