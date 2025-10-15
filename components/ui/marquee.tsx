@@ -72,7 +72,10 @@ export function Marquee({
   const marqueeStyle = React.useMemo(
     () =>
       {
-        const base: React.CSSProperties = {
+        const base: React.CSSProperties & {
+          "--duration": string
+          "--half-offset": string
+        } = {
           "--duration": `${Math.max(speed, 1)}s`,
           "--half-offset": `${halfOffset}px`,
         }
