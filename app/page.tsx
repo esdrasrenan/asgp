@@ -139,8 +139,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Grid de 3 cards */}
-          <div className="grid gap-6 md:gap-8 md:grid-cols-3">
+          {/* Grid de 4 cards */}
+          <div className="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-4">
             {/* Card 1 */}
             <div className="rounded-xl border bg-[#eef6ff] p-8 md:p-10 min-h-[26rem] md:min-h-[30rem] flex flex-col">
               <p className="text-sm text-foreground/70">Gestão financeira especializada</p>
@@ -172,17 +172,33 @@ export default function Home() {
             </div>
 
             {/* Card 3 */}
-            <div className="rounded-xl border bg-[#0a0f14] p-8 md:p-10 text-white min-h-[26rem] md:min-h-[30rem] flex flex-col">
-              <p className="text-sm text-white/80">Relatórios que impulsionam decisões</p>
-              <h3 className="mt-16 md:mt-24 text-3xl font-medium tracking-tight">
+            <div className="rounded-xl border bg-[#cfe1ff] p-8 md:p-10 min-h-[26rem] md:min-h-[30rem] flex flex-col">
+              <p className="text-sm text-foreground/70">Relatórios que impulsionam decisões</p>
+              <h3 className="mt-16 md:mt-24 text-3xl font-medium tracking-tight text-foreground">
                 Relatórios que
                 <br />
                 impulsionam decisões
               </h3>
-              <div className="my-6 h-px bg-white/15" />
-              <p className="text-white/80">
+              <div className="my-6 h-px bg-foreground/15" />
+              <p className="text-foreground/70">
                 Fornecemos relatórios gerenciais e indicadores estratégicos que oferecem
                 uma visão clara da saúde financeira da sua empresa.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="rounded-xl border bg-[#0a0f14] p-8 md:p-10 text-white min-h-[26rem] md:min-h-[30rem] flex flex-col">
+              <p className="text-sm text-white/70">Avaliação de valor estratégico</p>
+              <h3 className="mt-16 md:mt-24 text-3xl font-medium tracking-tight">
+                Valor estratégico
+                <br />
+                para o seu negócio
+              </h3>
+              <div className="my-6 h-px bg-white/15" />
+              <p className="text-white/80">
+                Ao terceirizar seus processos financeiros, você reduz custos com estrutura e equipe, elimina
+                retrabalhos e ganha eficiência. Assim, pode direcionar seus recursos e energia para o que realmente
+                gera valor — o crescimento do seu negócio.
               </p>
             </div>
           </div>
@@ -387,16 +403,10 @@ export default function Home() {
               <div className="space-y-5">
                 <span className="text-xs md:text-sm font-medium tracking-[0.08em] uppercase text-[var(--primary)]">Pronto para avançar</span>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground max-w-[28ch]">
-                  Simplifique sua rotina financeira com a ASGF.
+                  Simplifique sua rotina financeira com a ASGF
                 </h2>
                 <p className="text-foreground/80 max-w-[60ch]">
-                  Cuidamos de todo o seu BPO financeiro — do planejamento ao acompanhamento diário — para que você tenha clareza nas decisões e foco no crescimento.
-                </p>
-                <p className="text-sm md:text-base font-semibold text-[var(--primary)] mt-5 tracking-wide uppercase">
-                  Custo x benefício
-                </p>
-                <p className="text-foreground/80 max-w-[60ch]">
-                  Ao terceirizar seus processos financeiros, você reduz custos com estrutura e equipe, elimina retrabalhos e ganha eficiência. Assim, pode direcionar seus recursos e energia para o que realmente gera valor — o crescimento do seu negócio.
+                  Cuidamos de todo o seu financeiro — do planejamento ao acompanhamento diário — para que você tenha clareza nas decisões e foco no crescimento.
                 </p>
               </div>
               <div className="relative h-[260px] sm:h-[320px] md:h-[360px] lg:h-[420px] overflow-hidden rounded-3xl border border-border/60 bg-white">
